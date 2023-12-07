@@ -1,0 +1,10 @@
+---
+title: "An interactive introduction to data analysis with R"
+about:
+  template: jolla
+---
+
+Hello! Let's learn R!
+
+In this course, you'll learn the basics of using R for data analysis. This should provide you with the necessary skills to use R when learning more advanced and specialised topics. You don't need any prior experience with R, statistics, or programming to work through this material, however if you already have some experience you can start from any chapter you'd like to learn from.
+

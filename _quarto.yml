@@ -1,0 +1,20 @@
+project:
+  type: website
+  resources:
+    - "resources/lottie"
+
+website:
+  title: "Learn R - Introduction to data analysis with R and the tidyverse"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+  page-footer: 
+    background: light
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
