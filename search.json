@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "modules/basics.html",
+    "href": "modules/basics.html",
+    "title": "R programming basics",
+    "section": "",
+    "text": "One of the simplest thing that you can do with R is to use it as a calculator. Here are some common arithmetic operations:\n\nAddition: +\nSubtraction: -\nMultiplication: *\nDivision: /\nExponentiation: ^\nModulo: %%\n\nThe ^ operator raises the number to its left to the power of the number to its right. For example, if you enter 2^3, you will get the answer of 2 to the power 3, which is 8.\nThe %% operator gives the remainder of the division of the number to the left by the number on its right. For example, if you enter 7 %% 3, you will get the answer of 7 modulo 3 (7 = 3*2 + 1), which is 1.\nNote that you can add comment to your code using the # symbol. This is helpful when you want to take notes as you go, so that you can follow your R code when you come back to revise in a few weeks time!\n\n\n\nA basic concept in programming is called a variable. A variable allows you to store a value (e.g. 8) or an object (e.g. a piece of string) in R. You can then later use this variable’s name to easily access the value or the object that is stored within this variable.\nWe can assign the result of our arithmetic operations (which is a value), for instance, 2^3 to a variable named my_result using the following command: my_result &lt;- 2^3\nNow when you evaluate the value of the variable my_reuslt, you will get the value of 8.\n\n\n\n\n\n\nYour turn!\n\n\n\nNow it’s your turn to try variable assignment and some simple arithmetic operations in R!\nHint: Let’s say you would like to assign the result of summing from 1 to 5 to a variable named sum_to_five. You can do: sum_to_five &lt;- 1+2+3+4+5\nNow if you would like to divide sum_to_five by 5 and assign the result to average, you can do: average &lt;- sum_to_five/5\n\n\n\n  🟡 Loading\n    webR...\n  💡 Check answer\n  ✅ Show solution\n  💥 Reset code"
+  },
+  {
+    "objectID": "modules/basics.html#arithmetic-operations",
+    "href": "modules/basics.html#arithmetic-operations",
+    "title": "R programming basics",
+    "section": "",
+    "text": "One of the simplest thing that you can do with R is to use it as a calculator. Here are some common arithmetic operations:\n\nAddition: +\nSubtraction: -\nMultiplication: *\nDivision: /\nExponentiation: ^\nModulo: %%\n\nThe ^ operator raises the number to its left to the power of the number to its right. For example, if you enter 2^3, you will get the answer of 2 to the power 3, which is 8.\nThe %% operator gives the remainder of the division of the number to the left by the number on its right. For example, if you enter 7 %% 3, you will get the answer of 7 modulo 3 (7 = 3*2 + 1), which is 1.\nNote that you can add comment to your code using the # symbol. This is helpful when you want to take notes as you go, so that you can follow your R code when you come back to revise in a few weeks time!"
+  },
+  {
+    "objectID": "modules/basics.html#variable-assignment",
+    "href": "modules/basics.html#variable-assignment",
+    "title": "R programming basics",
+    "section": "",
+    "text": "A basic concept in programming is called a variable. A variable allows you to store a value (e.g. 8) or an object (e.g. a piece of string) in R. You can then later use this variable’s name to easily access the value or the object that is stored within this variable.\nWe can assign the result of our arithmetic operations (which is a value), for instance, 2^3 to a variable named my_result using the following command: my_result &lt;- 2^3\nNow when you evaluate the value of the variable my_reuslt, you will get the value of 8.\n\n\n\n\n\n\nYour turn!\n\n\n\nNow it’s your turn to try variable assignment and some simple arithmetic operations in R!\nHint: Let’s say you would like to assign the result of summing from 1 to 5 to a variable named sum_to_five. You can do: sum_to_five &lt;- 1+2+3+4+5\nNow if you would like to divide sum_to_five by 5 and assign the result to average, you can do: average &lt;- sum_to_five/5\n\n\n\n  🟡 Loading\n    webR...\n  💡 Check answer\n  ✅ Show solution\n  💥 Reset code"
+  },
+  {
+    "objectID": "modules/basics.html#basic-data-types-in-r-1",
+    "href": "modules/basics.html#basic-data-types-in-r-1",
+    "title": "R programming basics",
+    "section": "Basic Data Types in R",
+    "text": "Basic Data Types in R\nThere are numerous data types in R. Here are some of the basic ones:\n\nnumerics: numerical values\nlogical: boolean values (TRUE or FALSE)\ncharacters: String (a piece of text) like ‘some text’ or “some text”. Note that we use quotation marks to indicate if a value is a string.\n\n\nChecking the data types\nYou can check the data type of a variable with the class() function. This is a useful function since often you need matching data types when you perform operations in R. For example, you will get an error message if you try to evaluate 5 + \"6\".\n\n\nMore on numerics: Integer vs Double\nThe two most common numeric classes are “integer” and “double” (for double precision floating point numbers). “Integers” are whole numbers like 7. “Double” are decimal values like 5.217. R uses double precision numeric values by default.\n\ndb_var &lt;- 7\nclass(db_var)\n\n[1] \"numeric\"\n\n\nTo create integer values, you can add L after the number.\n\nint_var &lt;- 7L\nclass(int_var)\n\n[1] \"integer\"\n\n\n\n\n\n\n\n\nYour turn!\n\n\n\nPlay around with different variable types!\nHint: Replace the values in the R code with values that are provided in the instructions (the line with the comment #). For example, weather &lt;- \"sunny\" assigns the string “sunny” to the variable weather.\n\n\n\n  🟡 Loading\n    webR...\n  💡 Check answer\n  ✅ Show solution\n  💥 Reset code"
+  },
+  {
+    "objectID": "modules/basics.html#missing-values",
+    "href": "modules/basics.html#missing-values",
+    "title": "R programming basics",
+    "section": "Missing Values",
+    "text": "Missing Values\nThere are several special values in R, including NA, NaN, and Inf.\nNA\nNA (short for ‘Not Available’), is a logical constant of length 1 which contains a missing value indicator. We use NA to replace an entry of a vector when such value is unknown or missing. There are different types of NA for different class, including NA_integer_, NA_real_, NA_complex_ and NA_character_. NA_integer is of the integer class and so on.\nMost operations on an NA becomes an NA. For instance,\n\nx &lt;- c(1, 2, NA, 4)\nsum(x)\n\n[1] NA\n\n\nHowever, there is an exception - when we use the paste() function to concatenate NA with other strings. The operation will be performed with the NA.\n\nsome_string &lt;- c(\"Apple\",\"Banana\", NA, \"Orange\")\npaste(some_string, \" is good for you.\")\n\n[1] \"Apple  is good for you.\"  \"Banana  is good for you.\"\n[3] \"NA  is good for you.\"     \"Orange  is good for you.\"\n\n\nWe can use is.na() to test if a values is NA. The function is.na(x) returns a boolean vector of the same size as x with value TRUE if the corresponding element in x is NA.\n\nis.na(x)\n\n[1] FALSE FALSE  TRUE FALSE\n\n\nNaN\nNaN (short for ‘Not A Number’) is for arithmetic purposes. NaN usually comes from arithmetic operations that create undefined values such as 0/0, hence NaN is numeric. You can also use is.na() to check if a value is NaN.\n\ny &lt;- c(4, 0/0, 3,5)\nis.na(y)\n\n[1] FALSE  TRUE FALSE FALSE\n\n\nInf\nInf (short for Infinite), like NaN, also stems from numerical operations and thus is of numeric class. It usually comes operations like 1/0 where the result is a very very large number (larger than other numeric). Note that Inf is not a type of NA. You can use is.infinite() to check if a value is Inf.\n\nis.infinite(23/0)\n\n[1] TRUE"
+  },
+  {
+    "objectID": "modules/basics.html#data-frames-1",
+    "href": "modules/basics.html#data-frames-1",
+    "title": "R programming basics",
+    "section": "Data Frames",
+    "text": "Data Frames\nA data frame has the variables of a dataset as columns and the observations as rows.\n\n\n\n\n\n\nYour turn!\n\n\n\nLet’s look at an example. Just run the code and you will see what a data frame looks like in R.\nHint: Simply run the code!\n\n\n\n  🟡 Loading\n    webR...\n  💡 Check answer\n  ✅ Show solution\n  💥 Reset code\n  \n    \n    \n      \n    \n  \n  \n  \n\n\nThe iris data set gives the measurements in centimeters of the variables sepal length, sepal width, petal length and petal width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.\n\nQuick Look at the Data Frame\nOften it is useful to show only a small part of the entire dataset, especially when we are working with very big data set where showing the entire dataset is not easy. Here are a few useful commands that helps you understand the data frame very quickly.\n\nhead() shows the first few observations of a data frame.\ntail() shows the last few observations of a data frame.\nstr() shows the structure of the dataset.\n\n\n\n\n\n\n\nYour turn!\n\n\n\nInvestigate the structure of the example dataframe. Have a look at the first and last few observations!\nHint: Try head(df).\n\n\n\n  🟡 Loading\n    webR...\n  💡 Check answer\n  ✅ Show solution\n  💥 Reset code\n  \n    \n    \n      \n    \n  \n  \n  \n\n\n\n\n\nCreating Data Frame\nYou can construct your own data frame using data that you have with the data.frame() function. You can include different vectors as argument in the function and they will become different columns of your data frame. Note that you should make sure the vectors that you pass have same length (i.e. same number of observations for each column).\n\n\n\n\n\n\nYour turn\n\n\n\nCreate a data frame using vectors symbol, element, chemical_group and atomic_no, following that order. Assign the result data frame to first_ten_elements.\nHint: Use the data.frame() function on the vectors.\n\n\n\n  🟡 Loading\n    webR...\n  💡 Check answer\n  ✅ Show solution\n  💥 Reset code\n  \n    \n    \n      \n    \n  \n  \n  \n\n\n\n\nIndexing, Selecting Columns and Subset\nSimilar to vectors and matrices, you select elements from a data frame using square brackets [ ].\n\nFor example, if you would like to select row 2 to 4 and column 3 to 5 from a data frame called my_df, you can do my_df[2:4, 3:5].\nWhen you want to select the entire first row of a data frame, you can use `my_df[1, ]\nWhen you want to select the entire first column of a data frame, you can use my_df[,1]\n\nNote that when you select a single column (e.g. my_df[,1]), it turns into a vector. If you would like it to remain as a data frame, you can use my_df[, 1, drop = FALSE].\nAlternatively, if you would like to select a certain variable from the data frame, you can use the column name in the square bracket directly or use $ instead: my_df[ , \"column_name\"] or my_df$column_name.\n\n\nSorting\nSometimes we may want to sort the data according to a certain variable in the dataset. In R, we can use the order() function which gives the ranked position of each element when it is applied on a variable. For example,\n\nx &lt;- c(100, -200,300)\norder(x)\n\n[1] 2 1 3\n\n\nThe output above is the ranked positions and we can use that to sort the vector x.\n\nx[order(x)]\n\n[1] -200  100  300\n\n\nThe above R code gives an ordered version of x.\nNow that we know how to use the order(), let’s sort the first_ten_element data frame in ascending order of atomic_no, assign the sorted dataframe to sorted_df.\n\n\n\n\n\n\nYour turn\n\n\n\nComplete the code below to complete the tasks indicated in the comments.\nHint: Use order(first_ten_elements$atomic_no) to create positions. Then, use ‘positions’ with square brackets: first_ten_elements[...]; can you fill in the …? Do not forget that ‘positions’ indicates the order of the rows in the data frame.\n\n\n\n  🟡 Loading\n    webR...\n  💡 Check answer\n  ✅ Show solution\n  💥 Reset code"
+  },
+  {
+    "objectID": "modules/basics.html#for-loops",
+    "href": "modules/basics.html#for-loops",
+    "title": "R programming basics",
+    "section": "For loops",
+    "text": "For loops\nA simple for loop in R looks like this:\n\nsequence &lt;- c(1,3,5)\nfor (i in sequence) {\n  print(i)\n}\n\n[1] 1\n[1] 3\n[1] 5\n\n\nHere, we first defined a vector called sequence, then for every \\(i\\) in sequence, we print the value of \\(i\\). From the output, you can see from the output that each element i in the sequence was printed in each iteration.\nThe same loop can be written in another way:\n\nsequence &lt;- c(1,3,5)\nfor (i in 1:length(sequence)) {\n  print(sequence[i])\n}\n\n[1] 1\n[1] 3\n[1] 5\n\n\nIn the R code above, we use the length() function to measure the length/size of sequence, i.e. 3. Then we construct a for loop where \\(i\\) iterates from 1 to 3, inside the for loop i represents the index of the sequence and putting the index inside the square brackets allows us to select the \\(i\\)th element from sequence.\n\n\n\n\n\n\nYour turn: write your first loop!\n\n\n\nWrite a for loop that takes the nominal GDP (in trillion) for each country in 2017 and divided it by the population (in million) in the same year. Assign the result to the variable my_result.\nHint: To extract the i-th element of nominalGDP_trilion_2017, you can use nominalGDP_trilion_2017[i]. You can extract the i-th element of population_million_2017 using square bracket as well.\n\n\n\n  🟡 Loading\n    webR...\n  💡 Check answer\n  ✅ Show solution\n  💥 Reset code\n  \n    \n    \n      \n    \n  \n  \n  \n\n\nWe can do a lot more than when we use for loop together with the control flow statements (if, else if, else) we learnt before. For example,\n\ncustomer_rating &lt;- c(2,3,1,5,5,5)\n\nfor (rating in customer_rating) {\n  if (rating &gt;= 4) {\n  print('Happy Customer!')\n  } else if (rating &lt;= 2) {\n  print('Angry Customer!')\n  } else {\n  print('Neutral Customer!')\n  }\n}\n\n[1] \"Angry Customer!\"\n[1] \"Neutral Customer!\"\n[1] \"Angry Customer!\"\n[1] \"Happy Customer!\"\n[1] \"Happy Customer!\"\n[1] \"Happy Customer!\"\n\n\nThe R code above prints different messages depending on the values in customer_rating.\nCheck your understanding\nConsider the following syntax:\nfor (result in student_result) {\n  if (result &gt;= 79 & result &lt; 99) {\n  print('Superb!')\n  } else if (result &lt; 50) {\n  print('Try again!')\n  } else if (result &gt;= 99) {\n  print('Perfect!')\n  } else {\n  print('Well done!')\n  }\n}\nHere is the output from the above syntax after we have defined a vector variable student_result.\n[1] \"Superb!\"\n[1] \"Well done!\"\n[1] \"Try again!\"\n[1] \"Perfect!\"\n[1] \"Well done!\"\n[1] \"Superb!\"\nBased on the output from the for-loop, which of the following is student_result?\ncat(mc_opts(\"&lt;code&gt;student_result &lt;- c(99,77,35,97,67,85)&lt;/code&gt;\" =\"Try again! Copy the code and try it with some numbers in R!\",\n         \"&lt;code&gt;student_result &lt;- c(77,99,35,97,67,85)&lt;/code&gt;\" =\"Try again! Copy the code and try it with some numbers in R!\",\n         \"&lt;code&gt;student_result &lt;- c(97,77,35,99,67,85)&lt;/code&gt;\" = \"That's correct!\",\n         \"&lt;code&gt;student_result &lt;- c(100,77,35,99,67,85)&lt;/code&gt;\"=\"Try again! Copy the code and try it with some numbers in R!\",\n         correct = 3))"
+  },
+  {
+    "objectID": "modules/basics.html#while-loops",
+    "href": "modules/basics.html#while-loops",
+    "title": "R programming basics",
+    "section": "While loops",
+    "text": "While loops\nA while loop in R has the following structure:\nwhile (condition) {\n  do_something\n}\nIn the while loop, R will keep running the code between the brackets { } repeated until the condition become FALSE at some point during the execution. If the condition is never changed, the while loop will go on indefinitely.\nFor example, we create a while loop that will go on subtracting 28.5 (as weekly_spending) to the variable bank_balance until bank_balance is less than weekly_spending. If you execute the R code, you will notice the loop stopped at the 7th iteration.\n\nbank_balance &lt;- 200\nweekly_spending &lt;- 28.5\nwhile (bank_balance &gt;= weekly_spending) {\n  bank_balance = bank_balance - weekly_spending\n  print(bank_balance)\n}\n\n[1] 171.5\n[1] 143\n[1] 114.5\n[1] 86\n[1] 57.5\n[1] 29\n[1] 0.5"
+  },
+  {
+    "objectID": "modules/basics.html#break-statement",
+    "href": "modules/basics.html#break-statement",
+    "title": "R programming basics",
+    "section": "Break statement",
+    "text": "Break statement\nThere are occasions where breaking the loop during execution is a good idea. The break statement can be used in for loops and while loops.\nFor example, if we are to set up a early warning system when bank_balance is less than or equal to 4 times weekly spending, we can do the following:\n\nbank_balance &lt;- 200\nweekly_spending &lt;- 28.5\nwhile (bank_balance&gt;= weekly_spending) {\n  bank_balance &lt;- bank_balance - weekly_spending\n  print(bank_balance)\n  if (bank_balance &lt;= 4*weekly_spending){\n    print(\"Find a job and cut weekly spending!\")\n    break\n  }\n}\n\n[1] 171.5\n[1] 143\n[1] 114.5\n[1] 86\n[1] \"Find a job and cut weekly spending!\""
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "An interactive introduction to data analysis with R",
+    "section": "",
+    "text": "Hello! Let’s learn R!\nIn this course, you’ll learn the basics of using R for data analysis. This should provide you with the necessary skills to use R when learning more advanced and specialised topics. You don’t need any prior experience with R, statistics, or programming to work through this material, however if you already have some experience you can start from any chapter you’d like to learn from."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "modules.html",
+    "href": "modules.html",
+    "title": "LearnR modules",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\nGetting started with R & RStudio\n\n\n\n\nR programming basics\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "modules/setup.html",
+    "href": "modules/setup.html",
+    "title": "Getting started with R & RStudio",
+    "section": "",
+    "text": "Introduction to R\nRStudio Education for Beginners\nR for Data Science"
+  },
+  {
+    "objectID": "modules/setup.html#additional-resources",
+    "href": "modules/setup.html#additional-resources",
+    "title": "Getting started with R & RStudio",
+    "section": "",
+    "text": "Introduction to R\nRStudio Education for Beginners\nR for Data Science"
+  }
+]
