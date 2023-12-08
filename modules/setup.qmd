@@ -1,0 +1,13 @@
+---
+title: Getting started with R & RStudio
+subtitle: 'This chapter will teach you about many cool things about R and RStudio and help you get start with RStudio.'
+title-block-banner: yes
+---
+
+## Additional Resources 
+
+- [Introduction to R](https://cengel.github.io/R-intro/)
+
+- [RStudio Education for Beginners](https://education.rstudio.com/learn/beginner/)
+
+- [R for Data Science](https://r4ds.had.co.nz)

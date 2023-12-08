@@ -9,7 +9,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - modules.qmd
   page-footer: 
     background: light
 

@@ -1,0 +1,11 @@
+---
+title: "LearnR modules"
+subtitle: "Learning exercises about the basics of using R for data analysis."
+title-block-banner: true
+listing:
+  contents: modules
+  type: table
+  fields: [title]
+  filter-ui: [title]
+  page-size: 100
+---
