@@ -284,7 +284,8 @@
   
   // Setup answer checking functions
   await globalThis.webR.evalRVoid(
-`.printed <- list()
+`options(max.print = 100)
+.printed <- list()
 .errored <- character()
 .warned <- character()
 print <- function(x, ...) {

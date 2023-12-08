@@ -230,12 +230,7 @@ setup_template = setupTemplateFile()
 -- Define a function that escape control sequence
 function escapeControlSequences(str)
   -- Perform a global replacement on the control sequence character
-  return str:gsub("[\\%c]", function(c)
-    if c == "\\" then
-      -- Escape backslash
-      return "\\\\"
-    end
-  end)
+  return str:gsub("\\(%c)", "\\\\%1")
 end
 
 -- Define a function to replace solutions with blanks
@@ -413,7 +408,7 @@ end
 function extractCodeBlockOptions(block)
   
   -- Access the text aspect of the code block
-  local code = block.text
+  local code = block.text:gsub("`", "\\`")
 
   -- Define two local tables:
   --  the block's attributes
