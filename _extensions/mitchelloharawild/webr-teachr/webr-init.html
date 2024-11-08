@@ -305,10 +305,41 @@ capture_printed <- function(x) {
   if(x_vis$visible) print(x_vis$value) else invisible()
 }
 
+compare_args <- function(x, y) {
+  val <- match(x, y)
+  if(any(is.na(val))) return(FALSE)
+  identical(names(x), names(y)[val])
+}
+
+search_ast_impl <- function(.code, fn = NULL, fn_args = list()) {
+  if(!(is.call(.code) || is.expression(.code))) return(FALSE)
+  args <- as.list(.code[-1])
+  if(compare_args(fn_args, args)) {
+    if(is.null(fn) || identical(fn, .code[[1]])) return(TRUE)
+  }
+  
+  any(vapply(args, search_ast_impl, logical(1L), fn = fn, fn_args = fn_args))
+}
+
+search_ast <- function(.code, .fn = NULL, ..., .expr = NULL) {
+  .expr <- substitute(.expr)
+  if(!is.null(.expr)) {
+    .fn <- .expr[[1]]
+    fn_args <- as.list(.expr[-1])
+  } else {
+    .fn <- substitute(.fn)
+    fn_args <- as.list(substitute(...()))
+  }
+  
+  if(is.expression(.code)) .code <- as.list(.code)
+  any(vapply(.code, search_ast_impl, logical(1L), fn = .fn, fn_args = fn_args))
+}
+
 check_answer <- function(.code) {
   .printed <<- list()
   .errored <<- character()
   .warned <<- character()
+  .src <- .code
   .code <- as.expression(lapply(parse(text = .code), function(l) call("capture_printed", l)))
   eval(.code, envir = .GlobalEnv)
   results <- teachr_tests(.code, .printed, .errored, .warned)
